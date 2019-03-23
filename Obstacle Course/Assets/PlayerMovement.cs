@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
 	public Rigidbody rb;
 
-	public float forwardForce = 2000f;
+	public float forwardForce = 1200f;
 	public float sideForce = 500f;
 
     // Start is called before the first frame update
@@ -22,11 +22,11 @@ public class PlayerMovement : MonoBehaviour
         rb.AddForce(0, 0, forwardForce * Time.deltaTime);
 
         if (Input.GetKey("d")) {
-        	rb.AddForce(sideForce * Time.deltaTime, 0, 0);
+        	rb.AddForce(sideForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
 
         if (Input.GetKey("a")) {
-        	rb.AddForce(-sideForce * Time.deltaTime, 0, 0);
+        	rb.AddForce(-sideForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
     }
 }
