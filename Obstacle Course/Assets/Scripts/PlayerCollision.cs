@@ -9,13 +9,7 @@ public class PlayerCollision : MonoBehaviour
 	void OnCollisionEnter(Collision collisionInfo) {
 		if (collisionInfo.collider.tag == "Obstacle") {
 			movement.enabled = false;
-			Debug.Log("OBSTACLE COLLISION.");
+			FindObjectOfType<GameManager>().EndGame();
 		}
-
-		// //Stop the player if they fall off the map
-		// if (collisionInfo.collider.name != "Ground") {
-		// 	movement.enabled = false;
-		// 	Debug.Log("No ground collision.");
-		// }
 	}
 }
