@@ -698,7 +698,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 273005953}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 4940}
+  m_LocalPosition: {x: 0, y: 0, z: 4900}
   m_LocalScale: {x: 15, y: 1, z: 10000}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1122,6 +1122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1184730425}
   scoreText: {fileID: 516632353}
+  game: {fileID: 980723322}
 --- !u!1 &528304444
 GameObject:
   m_ObjectHideFlags: 0
@@ -1224,7 +1225,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 528304444}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3, y: 1, z: 60}
+  m_LocalPosition: {x: -3, y: 1, z: 59}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1380183674}
@@ -2186,7 +2187,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 829099964}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7, y: 1, z: 20}
+  m_LocalPosition: {x: -7, y: 1, z: 19}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1633942445}
@@ -2621,6 +2622,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1946666d72bcaca46ac5cc6b530cafda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameHasEnded: 0
   restartDelay: 2
 --- !u!4 &980723323
 Transform:
@@ -2832,7 +2834,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1184730421}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -55}
+  m_LocalPosition: {x: 0, y: 1, z: -95}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2870,6 +2872,7 @@ MonoBehaviour:
   forwardForce: 4000
   sideForce: 100
   difficulty: 0
+  game: {fileID: 980723322}
 --- !u!114 &1184730428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2883,6 +2886,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movement: {fileID: 1184730427}
+  game: {fileID: 980723322}
 --- !u!1 &1228165349
 GameObject:
   m_ObjectHideFlags: 0
@@ -3525,7 +3529,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1356347995}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3, y: 1, z: 40}
+  m_LocalPosition: {x: -3, y: 1, z: 39}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 116949219}
@@ -4399,7 +4403,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1608299306}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3, y: 1, z: 80}
+  m_LocalPosition: {x: -3, y: 1, z: 79}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1616186913}
