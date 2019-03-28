@@ -31,17 +31,22 @@ public class PlayerMovement : MonoBehaviour
     	//Add a forward force
             rb.AddForce(0, 0, forwardForce * Time.deltaTime + difficulty);
 
-            if (Input.GetKey("d")) {
+            if (Input.GetKey("right") || Input.GetKey("d")) {
                rb.AddForce(sideForce * Time.deltaTime + (difficulty/30), 0, 0, ForceMode.VelocityChange);
            }
 
-           if (Input.GetKey("a")) {
+           if (Input.GetKey("left") || Input.GetKey("a")) {
                rb.AddForce(-sideForce * Time.deltaTime - (difficulty/30), 0, 0, ForceMode.VelocityChange);
            }
 
            //Game has ended if player falls off playform
            if (rb.position.x <= -7.5f || rb.position.x >= 7.5f) {
             FindObjectOfType<GameManager>().EndGame();
+
+            //Player wins if they make it to the end
+            if (rb.position.z >= 2000) {
+              FindObjectOfType<GameManager>().WinGame();
+            }
         }
     } else {
         sideForce = 0;

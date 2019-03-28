@@ -10,13 +10,23 @@ public class Score : MonoBehaviour
     // Update is called once per frame
 	void Update()
 	{
-		if (game.gameHasEnded == false) {
+		//If the player hasn't lost NOR won, score keeps increasing
+		if (game.gameHasEnded == false && game.gameWon == false) {
 			if (player.position.z > 10) {
 				scoreText.text = (((player.position.z)-10)/20).ToString("0");
 			} else {
 				scoreText.text = "";
 			}
-		} else {
+		}
+
+		//If the player hasn't lost AND has won
+		if (game.gameHasEnded == false && game.gameWon == true) {
+			scoreText.color = Color.green;
+		} 
+
+		//If the player has lost
+		if (game.gameHasEnded == true)
+		{
 			scoreText.color = Color.red;
 		}
 	}
