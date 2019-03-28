@@ -18,7 +18,6 @@ public class CreateLevel : MonoBehaviour
     Object pickObstacle() {
     	int objectIndex = Random.Range(0,obstacles.Length);
         obstacle = obstacles[objectIndex];
-        obstacle = obstacles[0];
     	return obstacle;
     }
 }

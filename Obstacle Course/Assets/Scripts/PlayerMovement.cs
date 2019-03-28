@@ -21,22 +21,17 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         if (game.gameHasEnded == false) {
-        //Determine difficulty
-            if (rb.position.z < 0) {
-                difficulty = 1;
-            } else {
-                difficulty = (rb.position.z)/20;
-            }
-
     	//Add a forward force
-            rb.AddForce(0, 0, forwardForce * Time.deltaTime + difficulty);
+            rb.AddForce(0, 0, forwardForce * Time.deltaTime);
 
             if (Input.GetKey("right") || Input.GetKey("d")) {
-               rb.AddForce(sideForce * Time.deltaTime + (difficulty/30), 0, 0, ForceMode.VelocityChange);
+               //rb.AddForce(sideForce * Time.deltaTime + (difficulty/30), 0, 0, ForceMode.VelocityChange);
+              transform.Translate(Vector3.right * Time.deltaTime * 16);
            }
 
            if (Input.GetKey("left") || Input.GetKey("a")) {
-               rb.AddForce(-sideForce * Time.deltaTime - (difficulty/30), 0, 0, ForceMode.VelocityChange);
+               //rb.AddForce(-sideForce * Time.deltaTime - (difficulty/30), 0, 0, ForceMode.VelocityChange);
+              transform.Translate(Vector3.left * Time.deltaTime * 16);
            }
 
            //Game has ended if player falls off playform

@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
         if (Input.GetKey("escape"))
         {
             Application.Quit();
+            Debug.Log("Application terminated.");
         }
     }
 
